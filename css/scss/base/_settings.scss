@@ -1,0 +1,39 @@
+// COLORS
+// ---------------------------
+$brown:			#6A474B;
+$blue:			#1da6e1;
+
+
+// FONTS
+// ---------------------------
+$mr:			'Muller Regular';
+$mm:			'Muller Medium';
+$mb:			'Muller Bold';
+
+$pdr:			'Playfair Display Regular';
+$pdb:			'Playfair Display Bold';
+
+
+// RESPONSIVE
+// ---------------------------
+
+
+
+// TYPOGRAPHIC
+// ---------------------------
+html,
+body {
+	height: 100%;
+	font-family: $mr;
+	font-size: 16px;
+	color: #212121;
+}
+
+
+// lAYOUT
+// ---------------------------
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
