@@ -1,0 +1,50 @@
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	height: 100%;
+}
+.slider {
+	height: 100%;
+	position: relative;
+	margin-bottom: 0;
+
+	.slide {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	.slick-arrow {
+		bottom: 40px;
+		top: auto;
+		margin-top: 0;
+		z-index: 10;
+		width: 60px;
+		height: 60px;
+		background-color: #fff;
+		border-radius: 50%;
+		overflow: hidden;
+
+		&:before {
+			font-family: unset;
+			color: $brown;
+			font-size: 25px;
+			line-height: 15px;
+		}
+
+		&.slick-prev {
+			left: 80px;
+		}
+		&.slick-next {
+			left: 150px;
+		}
+	}
+
+	.counter {
+		position: absolute;
+		bottom: 110px;
+		left: 80px;
+		color: #fff;
+		font-size: 35px;
+		font-family: $pdr;
+	}
+}
