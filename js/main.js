@@ -42,7 +42,10 @@ jQuery(document).ready(function($) {
             });
             $('.clipMask circle').attr('r', '1600');
             $('body').css('overflow', 'hidden');
-            $('.advantagestSlider').css('opacity', '1');
+            $('.advantagestSlider').css({
+                'opacity': '1',
+                'transition-delay': '.3s'
+            });
         } else {
             $('.clipMask circle').attr('r', '0');
             $('.clipMask circle').css('transition-delay', '0s');
