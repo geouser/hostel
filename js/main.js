@@ -68,7 +68,6 @@ jQuery(document).ready(function($) {
             $('.sidebar').css({
                 'animation-name': 'moveBack'
             });
-            $('body').css('overflow', 'visible');
         }
     });
 
