@@ -33,35 +33,42 @@ jQuery(document).ready(function($) {
         $('.sideMenu').toggleClass('active');
 
         if ($('.sideMenu').hasClass('active')) {
-             $('.sideMenu').css({
-                'transition': '0s',
-                'left': '0%'
+            $('.sideMenu').css({
+                'left': '0%',
+                'transition-delay': '.0s'
+            });
+            $('.sideMenu .wrapper').css({
+                'opacity': '1',
+                'transition': 'opacity .2s .4s'
             });
             $('.sidebar').css({
                 'animation-name': 'move'
             });
-            $('.clipMask circle').attr('r', '1600');
-            $('body').css('overflow', 'hidden');
-            $('.advantagestSlider').css({
-                'opacity': '1',
-                'transition-delay': '.3s'
+            $('.circle').css({
+                'width': '150%',
+                'height': '150%',
             });
+            $('body').css('overflow', 'hidden');
+
         } else {
-            $('.clipMask circle').attr('r', '0');
-            $('.clipMask circle').css('transition-delay', '0s');
+            $('.circle').css({
+                'width': '1px',
+                'height': '1px',
+                'border-radius': '50%'
+            });
+            $('.sideMenu .wrapper').css({
+                'transition-delay': '0s',
+                'opacity': '0'
+            });
             $('.sideMenu').css({
-                'transition': '.1s',
-                'transition-delay': '1s',
+                'transition': '.0s',
+                'transition-delay': '.6s',
                 'left': '-200%'
             });
             $('.sidebar').css({
                 'animation-name': 'moveBack'
             });
             $('body').css('overflow', 'visible');
-            $('.advantagestSlider').css({
-                'opacity': '0',
-                'transition-delay': '0s'
-            });
         }
     });
 

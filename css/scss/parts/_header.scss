@@ -6,14 +6,33 @@ body {
     @include position(absolute, 0, auto, 0, 0);
     width: 960px;
     z-index: 100;
-    background: #fff;
     margin: 0;
     left: -200%;
     padding: 140px 0 30px 80px;
+    overflow: hidden;
     .wrapper {
         position: relative;
         z-index: 10;
         width: 100%;
+        opacity: 0;
+    -webkit-transition: opacity .2s .4s;
+       -moz-transition: opacity .2s .4s;
+        -ms-transition: opacity .2s .4s;
+         -o-transition: opacity .2s .4s;
+            transition: opacity .2s .4s;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 1px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: 20;
+        -webkit-box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
+        -moz-box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
+        box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
     }
     
         /*.................media.............*/
@@ -34,34 +53,22 @@ body {
         }
         /*.............end media..............*/
 }
-
-.clipMask {
+.circle {
+    width: 1px;
+    height: 1px;
+    background-color: #FFF;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    top: 0; bottom: 0;
+    left: -30%; 
     margin: auto;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    svg {
-        height: 100%;
-        width: 100%;
-    }
-    circle {
-        -webkit-transition: .8s;
-           -moz-transition: .8s;
-            -ms-transition: .8s;
-             -o-transition: .8s;
-                transition: .8s;
-       -webkit-transition-delay: .2s;
-        -moz-transition-delay: .2s;
-            -ms-transition-delay: .2s;
-             -o-transition-delay: .2s;
-                transition-delay: .2s;
-    }
+    -webkit-transition: all .6s;
+       -moz-transition: all .6s;
+        -ms-transition: all .6s;
+         -o-transition: all .6s;
+            transition: all .6s;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
 }
-
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
@@ -215,17 +222,11 @@ body {
 
 }
 
-
 .advantagestSlider {
     list-style-type: none;
     margin-top: 70px;
     text-align: left;
-    opacity: 0;
-    -webkit-transition: .4s opacity .6s;
-       -moz-transition: .4s opacity .6s;
-        -ms-transition: .4s opacity .6s;
-         -o-transition: .4s opacity .6s;
-            transition: .4s opacity .6s;
+    opacity: 1;
     li {
         display: inline-block;
         vertical-align: top;
