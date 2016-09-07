@@ -100,8 +100,8 @@ body {
     left: 0;
     height: 100%;
     right: auto;
-    -webkit-animation: mymove .8s forwards; /* Chrome, Safari, Opera */
-    animation: mymove .8s forwards;
+    -webkit-animation: mymove .5s forwards; /* Chrome, Safari, Opera */
+    animation: mymove .5s forwards;
     -webkit-transition: .4s;
        -moz-transition: .4s;
         -ms-transition: .4s;
@@ -112,34 +112,34 @@ body {
 /* Chrome, Safari, Opera */ 
 @-webkit-keyframes move {
     0% {left: 0;}
-    40% {left: -200px;}
-    41% {right: -100%; left: auto;}
-    42% {right: -100%; left: auto;}
-    70% {right: 0; left: auto;}
+    30% {left: -200px;}
+    31% {right: -100%; left: auto;}
+    32% {right: -100%; left: auto;}
+    90% {right: 0; left: auto;}
     100% {right: 0; left: auto;}
 } 
 
 /* Standard syntax */ 
 @keyframes move {
     0% {left: 0;}
-    40% {left: -200px;}
-    41% {right: -100%; left: auto;}
-    42% {right: -100%; left: auto;}
-    70% {right: 0; left: auto;}
+    30% {left: -200px;}
+    31% {right: -100%; left: auto;}
+    32% {right: -100%; left: auto;}
+    90% {right: 0; left: auto;}
     100% {right: 0; left: auto;}
 }
 
 @-webkit-keyframes moveBack {
     0% {right: 0;}
-    60% {right: -200px;}
-    65% {left: -200px; right: auto;}
+     70% {right: -200px; left: auto;}
+    75% {left: -200px; right: auto;}
     100% {left: 0; right: auto;}
 } 
 /* Standard syntax */ 
 @keyframes moveBack {
     0% {right: 0; left: auto;}
-    60% {right: -200px; left: auto;}
-    65% {left: -200px; right: auto;}
+    70% {right: -200px; left: auto;}
+    75% {left: -200px; right: auto;}
     100% {left: 0; right: auto;}
 }
 
