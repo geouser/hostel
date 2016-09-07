@@ -1,17 +1,23 @@
 /*Base styles*/
 @import 'base/reset';
 @import 'base/fonts';
-@import 'base/settings';
 @import 'base/mixins';
+@import 'base/settings';
 
 
 /*Plugins styles*/
 @import 'plugins/slick';
 @import 'plugins/slick-theme';
 @import 'plugins/magnific-popup';
+@import 'plugins/ps';
 
 
 /*Parts styles*/
 
+@import 'parts/viewport';
+@import 'parts/content';
 @import 'parts/header';
 @import 'parts/popup';
+@import 'parts/slider';
+
+@import 'parts/page-about';

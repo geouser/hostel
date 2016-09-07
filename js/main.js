@@ -184,4 +184,44 @@ jQuery(document).ready(function($) {
         
     });
 
+    /*----------------------------
+                              CUSTOM SCROLLBAR
+    -------------------------*/
+    $('.scroll').perfectScrollbar();
+    $(window).resize(function(event) {
+        $('.scroll').perfectScrollbar('update');
+    });
+
+
+    /*----------------------------
+                              SLIDER
+    -------------------------*/
+
+    $('.slider').on('init', function(event, slick){
+        $(slick.$slides[0]).css('background-image', 'url('+$(slick.$slides[0]).data('image')+')');
+        $(slick.$slides[1]).css('background-image', 'url('+$(slick.$slides[1]).data('image')+')');
+
+        $(this).append('<div class="counter"><span class="current"></span>/<span class="total"></span></div>')
+
+        $('.counter .total').text(slick.slideCount);
+        $('.counter .current').text(1)
+    });
+
+    $('.slider').on('afterChange', function(event, slick, currentSlide){
+        $(slick.$slides[currentSlide+1]).css('background-image', 'url('+$(slick.$slides[currentSlide+1]).data('image')+')');
+        $('.counter .current').text(currentSlide+1)
+    });
+
+    /*initialization*/
+    if ( $('.slider').length > 0 ) {
+        $('.slider').slick({
+            dots: false,
+            infinite: false
+        })    
+    }
+    
+
+
+
+
 }); // end file

@@ -1,0 +1,44 @@
+.content {
+	height: 100%;
+	position: relative;
+	padding-right: 15px;
+	font-size: 16px;
+	color: #212121;
+	line-height: 26px;
+
+	&:before {
+		content: "";
+		display: block;
+		background-image: url("../images/before.png");
+		background-position: 50% 100%;
+		width: 7px;
+		height: 145px;
+	}
+
+	.heading {
+		font-size: 13px;
+		text-transform: uppercase;
+		font-family: $mb;
+		color: $brown;
+		margin-top: 17px;
+		margin-bottom: 74px;
+	}
+
+	h2 {
+		font-size: 30px;
+		color: #333;
+		font-family: $pdb;
+		line-height: 40px;
+	}
+
+	p:not(:last-of-type) {
+		margin-bottom: 24px;
+	}
+
+	hr {
+		margin: 40px 0;
+		height: 1px;
+		border: 0;
+		background-color: #D7DBD9;
+	}
+}
