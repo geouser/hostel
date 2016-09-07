@@ -15,8 +15,9 @@
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
-        .wrapper {
+        .wrap {
             height: 100%;
+            padding-left: 220px;
             @include flex($direction: column, $alignI: flex-start, $justify: center);
             color: #FFF;
             text-align: left;
@@ -30,6 +31,7 @@
                 font: 16px/20px $mr;
                 width: 600px;
                 text-shadow: 1px 0 1px rgba(0,0,0,.15);
+                font-weight: normal;
             }
             button {
                 margin-top: 40px;
