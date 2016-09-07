@@ -9,6 +9,7 @@ body {
     background: #fff;
     margin: 0;
     left: -200%;
+    padding: 140px 0 30px 80px;
     .wrapper {
         position: relative;
         z-index: 10;
@@ -64,28 +65,53 @@ body {
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
+    text-align: left;
+    padding-top: 20px;
+    &:before {
+        content: "";
+        display: block;
+        background-image: url("../images/before.png");
+        background-position: 50% 100%;
+        width: 6px;
+        height: 145px;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+    }
+    p {
+        font: 13px $mb;
+        color: $brown;
+        text-transform: uppercase;
+    }
     ul {
+        margin-top: 75px;
         list-style-type: none;
-        a {
-            display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
+        counter-reset: ul;
+        padding-bottom: 92px;
+        border-bottom: 1px solid #888;
+        li {
+            a {
+                display: inline-block;
+                text-decoration: none;
+                font: 26px/50px $pdb;
+                color: $grey;
+                @include transition(all, .2s);             
+                &:hover {}
+            }
+            a:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                counter-increment: ul;                /* Increment the section counter*/
+                content: "0" counter(ul) "."; 
+                margin-right: 14px;
+                font: 22px $pdb;
+                color: #888888;
+                margin-bottom: 4px;
+            }
         }
 
             /*.................media.............*/
-            @include m800 { 
-                display: block;
-                height: 100%;
-                overflow: scroll;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
-            }
             /*.............end media.............*/
     }
 }
@@ -187,4 +213,46 @@ body {
         }
         /*..............end media.............*/
 
+}
+
+
+.advantagestSlider {
+    list-style-type: none;
+    margin-top: 70px;
+    text-align: left;
+    opacity: 0;
+    -webkit-transition: .4s opacity .6s;
+       -moz-transition: .4s opacity .6s;
+        -ms-transition: .4s opacity .6s;
+         -o-transition: .4s opacity .6s;
+            transition: .4s opacity .6s;
+    li {
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        width: 250px;
+        position: relative;
+        margin-right: 25px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+        &:before {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: $brown;
+            position: absolute;
+            left: -0px;
+            top: 6px;
+        }
+        span {
+            font: 13px $mb;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        p {
+            font: 13px/20px $mm;
+        }
+    }
 }

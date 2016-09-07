@@ -7,11 +7,6 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
-    $('#trigger').click(function(){
-        $('.clipMask circle').attr('r', '1600');
-        console.log( $('.clipMask circle').attr('r'));
-    });
-
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
@@ -46,7 +41,8 @@ jQuery(document).ready(function($) {
                 'animation-name': 'move'
             });
             $('.clipMask circle').attr('r', '1600');
-            $('body, html').css('overflow', 'hidden');
+            $('body').css('overflow', 'hidden');
+            $('.advantagestSlider').css('opacity', '1');
         } else {
             $('.clipMask circle').attr('r', '0');
             $('.clipMask circle').css('transition-delay', '0s');
@@ -58,7 +54,11 @@ jQuery(document).ready(function($) {
             $('.sidebar').css({
                 'animation-name': 'moveBack'
             });
-            $('body, html').css('overflow', 'visible');
+            $('body').css('overflow', 'visible');
+            $('.advantagestSlider').css({
+                'opacity': '0',
+                'transition-delay': '0s'
+            });
         }
     });
 
@@ -84,7 +84,38 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
-
+    $('.advantagestSlider').slick({
+        dots: false,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+    });
 
     /*----------------------------
                               SEND FORM
