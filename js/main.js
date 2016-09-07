@@ -45,8 +45,8 @@ jQuery(document).ready(function($) {
                 'animation-name': 'move'
             });
             $('.circle').css({
-                'width': '150%',
-                'height': '150%',
+                'width': '1600px',
+                'height': '1600px',
             });
             $('body').css('overflow', 'hidden');
 
