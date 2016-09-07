@@ -7,6 +7,11 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
+    $('#trigger').click(function(){
+        $('.clipMask circle').attr('r', '1600');
+        console.log( $('.clipMask circle').attr('r'));
+    });
+
     /*---------------------------
                                   ADD CLASS ON SCROLL
     ---------------------------*/
@@ -28,13 +33,33 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     $('.menu-button').on('click', function(event) {
         event.preventDefault();
+
         $(this).toggleClass('active');
-        $(this).siblings('header').toggleClass('active');
-        if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
-            } else {
-                $('body, html').css('overflow', 'visible');
-            }
+        $('.sideMenu').toggleClass('active');
+
+        if ($('.sideMenu').hasClass('active')) {
+             $('.sideMenu').css({
+                'transition': '0s',
+                'left': '0%'
+            });
+            $('.sidebar').css({
+                'animation-name': 'move'
+            });
+            $('.clipMask circle').attr('r', '1600');
+            $('body, html').css('overflow', 'hidden');
+        } else {
+            $('.clipMask circle').attr('r', '0');
+            $('.clipMask circle').css('transition-delay', '0s');
+            $('.sideMenu').css({
+                'transition': '.1s',
+                'transition-delay': '1s',
+                'left': '-200%'
+            });
+            $('.sidebar').css({
+                'animation-name': 'moveBack'
+            });
+            $('body, html').css('overflow', 'visible');
+        }
     });
 
 

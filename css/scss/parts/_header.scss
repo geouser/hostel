@@ -1,11 +1,19 @@
+body {
+    background-color: #eee;
+}
          
-.mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
-    width: 100%;
+.sideMenu {
+    @include position(absolute, 0, auto, 0, 0);
+    width: 960px;
     z-index: 100;
     background: #fff;
     margin: 0;
-    @include transition(all, .4s);
+    left: -200%;
+    .wrapper {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+    }
     
         /*.................media.............*/
         @include m800 {
@@ -17,8 +25,7 @@
             margin-top: 0;
             padding: 20px 0;
             z-index: 100;
-             
-            &.active { left: 0;}
+            
             .wrapper {
                    @include flexDirection(column);
                    width: 100%;
@@ -27,12 +34,37 @@
         /*.............end media..............*/
 }
 
+.clipMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+    circle {
+        -webkit-transition: .8s;
+           -moz-transition: .8s;
+            -ms-transition: .8s;
+             -o-transition: .8s;
+                transition: .8s;
+       -webkit-transition-delay: .2s;
+        -moz-transition-delay: .2s;
+            -ms-transition-delay: .2s;
+             -o-transition-delay: .2s;
+                transition-delay: .2s;
+    }
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
     ul {
-        @include flex();
         list-style-type: none;
         a {
             display: inline-block;
@@ -58,40 +90,93 @@
     }
 }
 
+/* ------------------------------------ */
+/*  Sidebar STYLES  */
+.sidebar {
+    background-color: #FFF;
+    width: 140px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: auto;
+    -webkit-animation: mymove .8s forwards; /* Chrome, Safari, Opera */
+    animation: mymove .8s forwards;
+    -webkit-transition: .4s;
+       -moz-transition: .4s;
+        -ms-transition: .4s;
+         -o-transition: .4s;
+            transition: .4s;
+}
 
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes move {
+    0% {left: 0;}
+    40% {left: -200px;}
+    41% {right: -100%; left: auto;}
+    42% {right: -100%; left: auto;}
+    80% {right: 0; left: auto;}
+    100% {right: 0; left: auto;}
+} 
+
+/* Standard syntax */ 
+@keyframes move {
+    0% {left: 0;}
+    40% {left: -200px;}
+    41% {right: -100%; left: auto;}
+    42% {right: -100%; left: auto;}
+    80% {right: 0; left: auto;}
+    100% {right: 0; left: auto;}
+}
+
+@-webkit-keyframes moveBack {
+    0% {right: 0;}
+    60% {right: -200px;}
+    65% {left: -200px; right: auto;}
+    100% {left: 0; right: auto;}
+} 
+/* Standard syntax */ 
+@keyframes moveBack {
+    0% {right: 0; left: auto;}
+    60% {right: -200px; left: auto;}
+    65% {left: -200px; right: auto;}
+    100% {left: 0; right: auto;}
+}
 
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */
-
 .menu-button     {    
-    display: none;
+    display: block;
     width: 50px;
-    height: 50px;
-    @include position(fixed, 15px, 15px, auto, auto);
+    height: 25px;
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: salmon;
+    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
     border: none;
+    background: transparent;
     -webkit-border-radius: 4px;
             border-radius: 4px;
     .menu-line {
         display: block;
         @include position(absolute, auto, 0, auto, 0);
         width: 60%;
-        height: 5px;
-        background-color: #fff;
-        -webkit-border-radius: 1px;
-        border-radius: 1px;
+        height: 3px;
+        background-color: #333333;
         @include transition(all, .4s);
     }
 
-    .top_line              {   top: 12px;  margin: auto;}
-    .middle_line           {   top: 22px;  margin: auto;}
-    .bottom_line           {   bottom: 12px; margin: auto;}
+    .top_line              {   top: 0px;  margin: auto;}
+    .middle_line           {   top: 11px;  margin: auto;}
+    .bottom_line           {   bottom: 0px; margin: auto;}
 
-    &.active               {   -webkit-border-radius: 6px; border-radius: 6px;}
+    &.active               {  }
     &.active .top_line     {   @include transform(rotate(45deg)); top: 45%;}
     &.active .bottom_line  {   @include transform(rotate(-45deg)); bottom: 45%;}
     &.active .middle_line  {   width: 0; left: 50%;}

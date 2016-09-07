@@ -23,10 +23,22 @@
 
        
         <!--=================================================================================================-->
-                                                    <!-- HEADER -->
-        <header class="mainHeader">
-            <div class="wrapper">
+                                                    <!-- HEADER --> 
+        <header class="sideMenu" style="-webkit-clip-path: url(#cd-image-1)">
 
+            <div class="clipMask">
+                <svg>
+                    <title>Animated SVG</title>
+                    <defs>
+                        <clipPath id="cd-image-1">
+                            <circle id="cd-circle-1" cx="0" cy="0" r="0"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div> <!-- clipMask -->
+            
+            <div class="wrapper">
+                
                 <nav class="mainNav"><!-- start navigation -->
                     <ul>
                         <li><a href="#" class="active">Home</a></li>
@@ -38,29 +50,22 @@
                     </ul>
                 </nav><!-- end nav -->
 
-                <div class="mainHeader__info">
-                    <div class="social">
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
-                    </div>
-                    <a href="tel:+971 55 915 94 49" class="tel">+971 55 915 94 49</a>
-                    <a href="mailto:hello@law.com" class="mail">hello@law.com</a>
-                </div><!-- end mainHeader__info -->
-
             </div><!-- end wrapper -->
         </header><!-- end header -->
         
-        <button class="menu-button"> 
-            <span class="menu-line top_line"></span>
-            <span class="menu-line middle_line"></span>
-            <span class="menu-line bottom_line"></span>
-        </button><!-- end toggle mobile menu -->
+        <aside class="sidebar">
+            <img src="images/logo.jpg" alt="">
+            <button class="menu-button"> 
+                <span class="menu-line top_line"></span>
+                <span class="menu-line middle_line"></span>
+                <span class="menu-line bottom_line"></span>
+            </button><!-- end toggle mobile menu -->
+        </aside>
 
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
-        <main>
+        <main style="background-image: url(images/main_slide_1.jpg)">
             <div class="wrapper">
                 
             </div><!-- end wrapper -->
