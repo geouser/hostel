@@ -72,7 +72,9 @@ jQuery(document).ready(function($) {
         }
     });
 
-
+    $('.mainslider').slick({
+        fade: true
+    });
 
     /*---------------------------
                                   Magnific popup

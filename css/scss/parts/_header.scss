@@ -14,44 +14,81 @@ body {
         position: relative;
         z-index: 10;
         width: 100%;
+        height: 100%;
         opacity: 0;
     -webkit-transition: opacity .2s .4s;
        -moz-transition: opacity .2s .4s;
         -ms-transition: opacity .2s .4s;
          -o-transition: opacity .2s .4s;
             transition: opacity .2s .4s;
-    }
-    &:after {
-        content: "";
-        display: block;
-        width: 1px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        z-index: 20;
-        -webkit-box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
-        -moz-box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
-        box-shadow: -49px 0px 15px -5px rgba(255,255,255,0.75);
+        &:after {
+            display: block;
+            content: '';
+            width: 15px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 21;
+            background: #FFF;
+            -webkit-box-shadow:  0 0 120px 100px rgba(255,255,255,1);
+            -moz-box-shadow: 0 0 120px 100px rgba(255,255,255,1);
+            box-shadow:  0 0 120px 100px rgba(255,255,255,1);
+        }
     }
     
         /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
-            width: 260px !important;
-            height: 100%;
-            text-align: center;
-            background-color: #fff;
-            margin-top: 0;
-            padding: 20px 0;
-            z-index: 100;
-            
-            .wrapper {
-                   @include flexDirection(column);
-                   width: 100%;
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30px;
+            margin: 0 0px 30px 0px;
+            padding-right: 80px;
+            text-align: left;
+            .builtAt {
+                float: right;
+                font: 13px $mm;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 22;
+                span {
+                    color: #ff7214;
+                }
             }
         }
         /*.............end media..............*/
+}
+
+.social {
+    display: inline-block;
+    &__item {
+        background-image: url("../images/social_icons.png");
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 17px;
+        width: 17px;
+        height: 16px;
+        background-repeat: no-repeat;
+        &--fb {
+            background-position: 0 0;
+        }
+        &--tw {
+            background-position: -59px 0;
+            width: 22px;
+        }
+        &--vm {
+            background-position: -27px 0px;
+            width: 19px;
+        }
+        &--inst {
+            background-position: -96px 0;
+            width: 22px;
+            margin-right: 0;
+        }
+    }
 }
 .circle {
     width: 1px;
@@ -126,6 +163,7 @@ body {
 /* ------------------------------------ */
 /*  Sidebar STYLES  */
 .sidebar {
+    z-index: 100;
     background-color: #FFF;
     width: 140px;
     position: fixed;
@@ -140,6 +178,24 @@ body {
         -ms-transition: .4s;
          -o-transition: .4s;
             transition: .4s;
+    .copyright {
+        position: absolute;
+        bottom: 30px;
+        width: 200px;
+        left: 80px; right: 0;
+        margin: auto;
+        font: 13px $mm;
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+             -o-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: left bottom;
+           -moz-transform-origin: left bottom;
+            -ms-transform-origin: left bottom;
+             -o-transform-origin: left bottom;
+                transform-origin: left bottom;
+    }
 }
 
 /* Chrome, Safari, Opera */ 
