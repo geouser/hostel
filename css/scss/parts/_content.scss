@@ -6,6 +6,10 @@
 	color: #212121;
 	line-height: 26px;
 
+	@media ($tablets) {
+		padding-right: 0;
+	}
+
 	.heading {
 		font-size: 13px;
 		text-transform: uppercase;

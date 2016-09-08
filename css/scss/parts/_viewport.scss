@@ -3,14 +3,28 @@
 		@include flex($wrap: wrap);
 	}
 
+	@media ($tablets) {
+		height: auto;
+	}
+
 	.column {
 		width: 50%;
 		height: 100%;
 		overflow: hidden;
 
+		@media ($tablets) {
+			width: 100%;
+			height: auto;
+		}
+
 		&--content {
 			background-color: #F2F5ED;
 			padding: 0 45px 60px 50px;
+
+			@media ($phones) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 		}
 
 		&--full {
@@ -21,6 +35,21 @@
 			background-size: cover;
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
+			position: relative;
+
+			@media ($tablets) {
+				&:after {
+					content: '';
+					display: block;
+					padding-bottom: 120%;
+				}
+
+				&.column--map:after {
+					content: '';
+					display: block;
+					padding-bottom: 350px;
+				}
+			}
 		}
 	}
 }

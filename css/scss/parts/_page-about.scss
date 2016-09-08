@@ -4,6 +4,12 @@
 	color: $blue;
 	font-size: 16px;
 
+	@media ($tablets) {
+		position: static;
+		margin-top: 25px;
+		display: inline-block;
+	}
+
 	&:before {
 		content:'';
 		width: 17px;

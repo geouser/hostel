@@ -21,6 +21,11 @@
 			width: 33.333%;
 			list-style: none;
 
+			@media ($phones) {
+				width: 50%;
+				font-size: 13px;
+			}
+
 			&:before {
 				content: '';
 				width: 4px;
