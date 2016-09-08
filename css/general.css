@@ -1218,7 +1218,7 @@ img.mfp-img {
     background-color: #D7DBD9; }
 
 .sideMenu {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: auto;
   top: 0;
@@ -1457,7 +1457,7 @@ img.mfp-img {
     -ms-transform-origin: left bottom;
     -o-transform-origin: left bottom;
     transform-origin: left bottom; }
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       .sidebar .copyright {
         left: 60px; } }
     @media (max-width: 600px) {
@@ -1753,6 +1753,9 @@ img.mfp-img {
             text-align: center; }
           .mainslider__slide .wrap button {
             margin: 20px auto; } }
+      @media (max-width: 800px) {
+        .mainslider__slide .wrap {
+          padding-left: 100px; } }
       @media (max-width: 600px) {
         .mainslider__slide .wrap {
           padding-left: 0px;
@@ -1976,7 +1979,7 @@ img.mfp-img {
             left: 150px; }
         .room__info__details .roomslider .counter {
           position: absolute;
-          bottom: 110px;
+          bottom: 130px;
           left: 80px;
           color: #fff;
           font-size: 35px;
