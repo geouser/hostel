@@ -1467,7 +1467,7 @@ img.mfp-img {
 }
 
 .sideMenu {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: auto;
   top: 0;
@@ -2415,7 +2415,7 @@ img.mfp-img {
 }
 .room__info__details .roomslider .counter {
   position: absolute;
-  bottom: 110px;
+  bottom: 130px;
   left: 80px;
   color: #fff;
   font-size: 35px;
