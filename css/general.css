@@ -1554,6 +1554,7 @@ img.mfp-img {
 @media (max-height: 800px) {
   .sideMenu footer {
     margin: 0 0px 0px 0px;
+    height: 20px;
   }
 }
 @media (max-height: 600px) {
