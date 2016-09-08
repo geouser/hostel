@@ -395,7 +395,7 @@
             display: block;
             width: 7px;
             height: 7px;
-            background-color: $brown;
+            background-color: #878787;
             position: absolute;
             left: -0px;
             top: 6px;
@@ -405,9 +405,19 @@
             text-transform: uppercase;
             display: inline-block;
             margin-bottom: 15px;
+            color: #878787;
         }
         p {
             font: 13px/20px $mm;
+            color: #555555;
+        }
+        &:hover {
+            &:before {
+                color: $brown;
+            }
+            span {
+                color: $brown;
+            }
         }
     }
     .slick-dots {
