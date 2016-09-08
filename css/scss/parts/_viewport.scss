@@ -6,6 +6,10 @@
 	@media ($tablets) {
 		height: auto;
 	}
+	@media ($tablets) and (orientation: portrait) {
+		height: 100%;
+		overflow: scroll;
+	}
 
 	.column {
 		width: 50%;
@@ -36,6 +40,10 @@
 			background-position: 50% 50%;
 			background-repeat: no-repeat;
 			position: relative;
+
+			@media ($tablets) and (orientation: portrait) {
+				height: 100%;
+			}
 
 			@media ($tablets) {
 				&:after {
