@@ -1542,6 +1542,7 @@ img.mfp-img {
   text-align: left;
 }
 .sideMenu footer .builtAt {
+  padding-top: 4px;
   float: right;
   font: 13px "Muller Medium";
   text-transform: uppercase;
@@ -1697,6 +1698,11 @@ img.mfp-img {
   font: 22px "Playfair Display Bold";
   color: #888888;
   margin-bottom: 4px;
+}
+@media (max-height: 800px) {
+  .mainNav ul li a {
+    font: 24px/45px "Playfair Display Bold";
+  }
 }
 @media (max-height: 600px) {
   .mainNav ul li a {
