@@ -53,8 +53,8 @@ jQuery(document).ready(function($) {
                 });
             } else if ($(window).width() < 1200) {
                 $('.circle').css({
-                    'width': '1820px',
-                    'height': '1820px',
+                    'width': '1900px',
+                    'height': '1900px',
                 });
             } else  {
                 $('.circle').css({

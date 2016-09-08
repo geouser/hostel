@@ -2,7 +2,7 @@
 .sideMenu {
     @include position(absolute, 0, auto, 0, 0);
     width: 960px;
-    z-index: 100;
+    z-index: 1000;
     margin: 0;
     left: -200%;
     padding: 140px 0 30px 80px;
@@ -212,7 +212,7 @@
 /* ------------------------------------ */
 /*  Sidebar STYLES  */
 .sidebar {
-    z-index: 100;
+    z-index: 1000;
     background-color: #FFF;
     width: 140px;
     position: fixed;
