@@ -202,10 +202,7 @@ jQuery(document).ready(function($) {
     -------------------------*/
     /*initialization*/
     if ( $('.slider').length > 0 ) {
-        $('.slider').slick({
-            dots: false,
-            infinite: false
-        })    
+        
         $('.slider').on('init', function(event, slick){
             $(slick.$slides[0]).css('background-image', 'url('+$(slick.$slides[0]).data('image')+')');
             $(slick.$slides[1]).css('background-image', 'url('+$(slick.$slides[1]).data('image')+')');
@@ -219,6 +216,11 @@ jQuery(document).ready(function($) {
         $('.slider').on('afterChange', function(event, slick, currentSlide){
             $(slick.$slides[currentSlide+1]).css('background-image', 'url('+$(slick.$slides[currentSlide+1]).data('image')+')');
             $('.counter .current').text(currentSlide+1)
+        });
+
+        $('.slider').slick({
+            dots: false,
+            infinite: false
         });
     }
 
