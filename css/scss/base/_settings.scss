@@ -43,4 +43,12 @@ main {
     width: 100%;
     overflow: hidden;
     padding-left: 140px;
+    background: #F2F5ED;
+    @media (max-width: 800px) {
+        padding-left: 100px;
+    }
+    @media (max-width: 600px) {
+        padding-left: 0px;
+        padding-top: 80px;
+    }
 }

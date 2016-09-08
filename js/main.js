@@ -41,13 +41,27 @@ jQuery(document).ready(function($) {
                 'opacity': '1',
                 'transition': 'opacity .2s .4s'
             });
-            $('.sidebar').css({
-                'animation-name': 'move'
-            });
-            $('.circle').css({
-                'width': '1600px',
-                'height': '1600px',
-            });
+            if ($(window).width() > 600) {
+                $('.sidebar').css({
+                    'animation-name': 'move'
+                });
+            }
+            if ($(window).width() < 750) {
+               $('.circle').css({
+                    'width': '1220px',
+                    'height': '1220px',
+                });
+            } else if ($(window).width() < 1200) {
+                $('.circle').css({
+                    'width': '1820px',
+                    'height': '1820px',
+                });
+            } else  {
+                $('.circle').css({
+                    'width': '1600px',
+                    'height': '1600px',
+                });
+            }
             $('body').css('overflow', 'hidden');
 
         } else {
@@ -65,9 +79,11 @@ jQuery(document).ready(function($) {
                 'transition-delay': '.6s',
                 'left': '-200%'
             });
-            $('.sidebar').css({
-                'animation-name': 'moveBack'
-            });
+            if ($(window).width() > 600) {
+                $('.sidebar').css({
+                    'animation-name': 'moveBack'
+                });
+            }
         }
     });
 
@@ -101,31 +117,18 @@ jQuery(document).ready(function($) {
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
+        daptiveHeight: true,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 1100,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true
               }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
             }
-          ]
+        ]
     });
 
     /*----------------------------

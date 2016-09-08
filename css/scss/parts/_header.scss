@@ -7,6 +7,20 @@
     left: -200%;
     padding: 140px 0 30px 80px;
     overflow: hidden;
+    @media (max-width: 1100px) {
+        padding: 40px 0 30px 40px;
+        width: 500px;
+    }
+    @media (max-width: 650px) {
+        width: 300px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+        padding: 40px 0 30px 20px;
+    }
+    @include mh700 {
+        
+    }
     .wrapper {
         position: relative;
         z-index: 10;
@@ -32,6 +46,13 @@
             -moz-box-shadow: 0 0 120px 100px rgba(255,255,255,1);
             box-shadow:  0 0 120px 100px rgba(255,255,255,1);
         }
+        @media (max-width: 1100px) {
+            &:after {
+                -webkit-box-shadow:  0 0 10px 10px rgba(255,255,255,1);
+                -moz-box-shadow: 0 0 10px 10px rgba(255,255,255,1);
+                box-shadow:  0 0 10px 10px rgba(255,255,255,1);
+            }
+        }
     }
     
         /*.................media.............*/
@@ -55,6 +76,22 @@
                     color: #ff7214;
                 }
             }
+            @include mh800 {
+                margin: 0 0px 0px 0px;
+            }
+            @media (max-height: 600px) {
+                position: static;
+                margin-top: 20px;
+            }
+             @media (max-width: 600px) {
+                padding-right: 0;
+                 .builtAt {
+                    float: none;
+                    display: block;
+                    margin-top: 10px;
+                    text-align: left;
+                }
+             }
         }
         /*.............end media..............*/
 }
@@ -130,6 +167,13 @@
         counter-reset: ul;
         padding-bottom: 92px;
         border-bottom: 1px solid #888;
+        @include mh800 {
+            padding-bottom: 40px;
+        }
+        @include mh700 {
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
         li {
             a {
                 display: inline-block;
@@ -149,6 +193,14 @@
                 font: 22px $pdb;
                 color: #888888;
                 margin-bottom: 4px;
+            }
+            @media (max-height: 600px) {
+                a {
+                    font: 22px/45px $pdb;
+                    a:before { 
+                        font-size: 20px;
+                    }
+                }
             }
         }
 
@@ -175,6 +227,21 @@
         -ms-transition: .4s;
          -o-transition: .4s;
             transition: .4s;
+    @media (max-width: 800px) {
+        width: 100px;
+    }
+    @media (max-width: 600px) {
+        width: 100%;
+        right: auto;
+        height: 80px;
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
     .copyright {
         position: absolute;
         bottom: 30px;
@@ -192,6 +259,12 @@
             -ms-transform-origin: left bottom;
              -o-transform-origin: left bottom;
                 transform-origin: left bottom;
+        @media (max-width: 700px) {
+            left: 60px
+        }
+        @media (max-width: 600px) { 
+            display: none;
+        }
     }
 }
 
@@ -228,6 +301,27 @@
     75% {left: -200px; right: auto;}
     100% {left: 0; right: auto;}
 }
+@media (max-width: 800px){
+    /* Chrome, Safari, Opera */ 
+    @-webkit-keyframes move {
+        0% {left: 0;}
+        60% {left: -100px;}
+        61% {right: -100%; left: auto;}
+        62% {right: -100%; left: auto;}
+        90% {right: 0; left: auto;}
+        100% {right: 0; left: auto;}
+    } 
+
+    /* Standard syntax */ 
+    @keyframes move {
+        0% {left: 0;}
+        60% {left: -100px;}
+        61% {right: -100%; left: auto;}
+        62% {right: -100%; left: auto;}
+        90% {right: 0; left: auto;}
+        100% {right: 0; left: auto;}
+    }
+}
 
 
 /* ------------------------------------ */
@@ -249,6 +343,10 @@
     background: transparent;
     -webkit-border-radius: 4px;
             border-radius: 4px;
+    @media (max-width: 600px) {
+        left: auto;
+        right: 20px;
+    }
     .menu-line {
         display: block;
         @include position(absolute, auto, 0, auto, 0);
@@ -289,6 +387,9 @@
         margin-right: 25px;
         margin-bottom: 40px;
         padding-left: 20px;
+        @include mh700 {
+            margin-bottom: 10px;
+        }
         &:before {
             content: "";
             display: block;
@@ -308,5 +409,29 @@
         p {
             font: 13px/20px $mm;
         }
+    }
+    .slick-dots {
+        position: static;
+        margin: 4px 0 0;
+    }
+    .slick-dots li {
+        width: auto;
+        margin: 0 5px;
+        &.slick-active {
+            opacity: .4;
+        }
+    }
+    .slick-dots li:before {
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+    }
+    .slick-dots li button {
+        display: none;
+    }
+    @include mh800 {
+        margin-top: 40px;
+    }
+    @include mh700 {
+        margin-top: 20px;
     }
 }
