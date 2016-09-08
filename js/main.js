@@ -205,10 +205,7 @@ jQuery(document).ready(function($) {
     -------------------------*/
     /*initialization*/
     if ( $('.slider').length > 0 ) {
-        $('.slider').slick({
-            dots: false,
-            infinite: false
-        })    
+        
         $('.slider').on('init', function(event, slick){
             $(slick.$slides[0]).css('background-image', 'url('+$(slick.$slides[0]).data('image')+')');
             $(slick.$slides[1]).css('background-image', 'url('+$(slick.$slides[1]).data('image')+')');
@@ -222,6 +219,11 @@ jQuery(document).ready(function($) {
         $('.slider').on('afterChange', function(event, slick, currentSlide){
             $(slick.$slides[currentSlide+1]).css('background-image', 'url('+$(slick.$slides[currentSlide+1]).data('image')+')');
             $('.counter .current').text(currentSlide+1)
+        });
+
+        $('.slider').slick({
+            dots: false,
+            infinite: false
         });
     }
 
@@ -274,8 +276,55 @@ jQuery(document).ready(function($) {
             });
         }
 
-    
 
+
+    
+    /*---------------------------
+                                GOOGLE MAP
+    ---------------------------*/
+    var map;
+    function googleMap_initialize() {
+        var lat = $('#map_canvas').data('lat');
+        var long = $('#map_canvas').data('lng');
+
+        var mapCenterCoord = new google.maps.LatLng(lat, long);
+        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+
+        var mapOptions = {
+            center: mapCenterCoord,
+            zoom: 14,
+            //draggable: false,
+            disableDefaultUI: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var image = {
+            url: 'images/location.png',
+            size: new google.maps.Size(62, 57),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(22, 57),
+        };
+        var marker = new google.maps.Marker({
+            icon: image,
+            position: mapMarkerCoord, 
+            map: map
+        });
+
+        map.addListener('click', function(e) {
+            console.log('{lat: '+e.latLng.lat()+', lng: '+e.latLng.lng()+'},');
+        });
+
+        $(window).resize(function (){
+            map.setCenter(mapCenterCoord);
+        });
+    }
+
+    if ( $('#map_canvas').length > 0) {
+        googleMap_initialize();   
+    }
 
 
 
