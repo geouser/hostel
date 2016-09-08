@@ -2097,6 +2097,8 @@ img.mfp-img {
     color: #fff;
     font-size: 35px;
     font-family: "Playfair Display Regular"; }
+    .slider .counter span {
+      color: #fff; }
     @media (max-width: 767px) {
       .slider .counter {
         left: 20px;

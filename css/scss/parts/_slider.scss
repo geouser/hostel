@@ -67,6 +67,10 @@
 		font-size: 35px;
 		font-family: $pdr;
 
+		span {
+			color: #fff;
+		}
+
 		@media ($phones) {
 			left: 20px;
 			bottom: 90px;
