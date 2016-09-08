@@ -1,0 +1,36 @@
+.services {
+	padding-top: 55px;
+
+	&__title {
+		font-size: 13px;
+		text-transform: uppercase;
+		color: $blue;
+		font-family: $mb;
+	}
+
+	&__list {
+		margin: 0;
+		font-size: 14px;
+		padding-top: 12px;
+		font-family: $mm;
+		@include flex($alignI: flex-start, $justify: flex-start);
+
+		li {
+			padding: 0 14px;
+			position: relative;
+			width: 33.333%;
+			list-style: none;
+
+			&:before {
+				content: '';
+				width: 4px;
+				height: 4px;
+				background-color: #AAAAAA;
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 9px;
+			}
+		}
+	}
+}

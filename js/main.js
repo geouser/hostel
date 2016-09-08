@@ -222,6 +222,15 @@ jQuery(document).ready(function($) {
     
 
 
+    /*----------------------------
+                              Services columns
+    -------------------------*/
+    $('.services__list').each(function(index, el) {
+        if ( $(this).find('li').length <= 4 ) {
+            $(this).find('li').css('width', '100%');
+        }
+    });
+
 
 
 }); // end file

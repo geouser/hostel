@@ -6,22 +6,22 @@
 	color: #212121;
 	line-height: 26px;
 
-	&:before {
-		content: "";
-		display: block;
-		background-image: url("../images/before.png");
-		background-position: 50% 100%;
-		width: 7px;
-		height: 145px;
-	}
-
 	.heading {
 		font-size: 13px;
 		text-transform: uppercase;
 		font-family: $mb;
 		color: $brown;
-		margin-top: 17px;
 		margin-bottom: 74px;
+
+		&:before {
+			content: "";
+			display: block;
+			margin-bottom: 17px;
+			background-image: url("../images/before.png");
+			background-position: 50% 100%;
+			width: 7px;
+			height: 145px;
+		}
 	}
 
 	h2 {

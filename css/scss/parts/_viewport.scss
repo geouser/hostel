@@ -16,5 +16,11 @@
 		&--full {
 			width: 100%;
 		}
+
+		&--media {
+			background-size: cover;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+		}
 	}
 }
