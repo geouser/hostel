@@ -68,11 +68,12 @@ jQuery(document).ready(function($) {
             $('.sidebar').css({
                 'animation-name': 'moveBack'
             });
-            $('body').css('overflow', 'visible');
         }
     });
 
-
+    $('.mainslider').slick({
+        fade: true
+    });
 
     /*---------------------------
                                   Magnific popup

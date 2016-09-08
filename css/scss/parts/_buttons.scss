@@ -1,0 +1,25 @@
+.button {
+    color: #FFF;
+    background: #6a474b;
+    text-align: center;
+    height: 60px;
+    width: 200px;
+    border: none;
+    font: 13px $mb;
+    padding-top: 6px;
+    text-transform: uppercase;
+    -webkit-border-radius: 40px;
+            border-radius: 40px;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 22px;
+        height: 22px;
+        background-image: url("../images/check.png");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        margin-top: -2px;
+    }
+}
