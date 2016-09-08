@@ -21,7 +21,7 @@
 			width: 33.333%;
 			list-style: none;
 
-			@media ($phones) {
+			@media (max-width: 1300px) {
 				width: 50%;
 				font-size: 13px;
 			}
