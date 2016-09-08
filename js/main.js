@@ -189,6 +189,12 @@ jQuery(document).ready(function($) {
     /*----------------------------
                               CUSTOM SCROLLBAR
     -------------------------*/
+    if ( $('.scroll').length > 0 ) {
+        $('.scroll').perfectScrollbar();
+        $(window).resize(function(event) {
+            $('.scroll').perfectScrollbar('update');
+        });    
+    }
 
 
     /*----------------------------
