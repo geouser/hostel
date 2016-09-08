@@ -6,8 +6,12 @@
 	margin-bottom: 74px;
 	position: absolute;
 	top: 0;
-	left: 200px;
+	left: 60px;
 	z-index: 10;
+
+	@media ($phones) {
+		display: none;
+	}
 
 	&:before {
 		content: "";
@@ -21,14 +25,45 @@
 }
 
 .slider--gallery {
+	height: 100%;
 	.slide {
 		padding: 240px 0 0 60px;
+
+		@media ($phones) {
+			padding-left: 20px;
+			padding-top: 60px;
+		}
 		&__title {
 			font-size: 30px;
 			color: #fff;
 			font-family: $pdb;
 			width: 600px;
 			line-height: 40px;
+
+			@media ($tablets) {
+				width: 100%;
+				padding-right: 60px;
+			}
+			@media ($phones) {
+				padding-right: 20px;
+				font-size: 25px;
+				line-height: normal;
+			}
+		}
+	}
+
+	.slick-prev {
+		left: 60px!important;
+
+		@media ($phones) {
+			left: 20px!important;
+		}
+	}
+	.slick-next {
+		left: 130px!important;
+
+		@media ($phones) {
+			left: 90px!important;
 		}
 	}
 }
