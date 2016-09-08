@@ -195,12 +195,15 @@ jQuery(document).ready(function($) {
                               CUSTOM SCROLLBAR
     -------------------------*/
     if ( $('.scroll').length > 0 ) {
-        if ( $(window).width > 991 ) {
-            $('.scroll').perfectScrollbar();
+        $('.scroll').perfectScrollbar();
+        if ( $(window).width() < 992 ) {
+            $('.scroll').perfectScrollbar('destroy');
         }
         $(window).resize(function(event) {
             $('.scroll').perfectScrollbar('update');
-            if ( $(window).width < 992 ) {
+            if ( $(window).width() < 992 ) {
+                $('.scroll').perfectScrollbar('destroy');
+            } else {
                 $('.scroll').perfectScrollbar();
             }
         });    
