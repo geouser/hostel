@@ -84,6 +84,7 @@ jQuery(document).ready(function($) {
                     'animation-name': 'moveBack'
                 });
             }
+            $('body').css('overflow', 'visible');
         }
     });
 
@@ -223,13 +224,14 @@ jQuery(document).ready(function($) {
 
         $('.slider').slick({
             dots: false,
-            infinite: false
+            infinite: false,
+            fade: true
         });
     }
 
 
         $('.back').click(function(){
-            var parent = $(this).parent().parent();
+            var parent = $(this).parent().parent().parent().parent();
             parent.css({
                 'position': 'absolute',
                 'left': '0',
@@ -244,7 +246,6 @@ jQuery(document).ready(function($) {
         $('.room__card').click(function(){
             var roomDetails = $(this).next('.room__info__details');
             roomDetails.css({
-                    'left': '140px',
                     'transform': 'scale(1)',
                     'position': 'fixed',
                     'margin-top': '0px',

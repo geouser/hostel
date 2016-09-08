@@ -17,13 +17,16 @@
     @media (max-width: 1100px) {
         width: 300px;
     }
+    @media (max-width: 600px) {
+        margin-bottom: 60px;
+    }
     &__img {
         height: 270px;
         position: relative;
         img {
             max-width: 100%;
         }
-         @media (max-width: 1100px) {
+        @media (max-width: 1100px) {
             height: 204px;
         }
         &:before {
@@ -81,11 +84,17 @@
                 @include transition(all, .2s);
             }
         }
+        @media (max-width: 600px) {
+            padding: 15px 14px 10px;
+        }
         &__include {
             margin-top: 25px;
             padding-top: 20px;
             border-top: 1px solid #d7dbd9;
             font-size: 16px;
+            @media (max-width: 600px) {
+                    font-size: 14px;
+                }
             span {
                 display: inline-block;
                 vertical-align: middle;
@@ -130,6 +139,7 @@
             position: absolute;
             height: 100%;
             width: 100%;
+            padding-left: 140px;
             background-color: #FFF;
             z-index: 100;
             right: 0;
@@ -142,8 +152,17 @@
                 -ms-transform: scale(0);
                  -o-transform: scale(0);
                     transform: scale(0);
+            @media (max-width: 991px) {
+                bottom: auto;
+            }
             .column {
                 display: none;
+            }
+            @media (max-width: 1100px) {
+                padding-left: 100px;
+            }
+            @media (max-width: 600px) {
+                padding-left: 0px;
             }
             h2 {
                 font-size: 30px;
@@ -155,6 +174,13 @@
                 height: 100%;
                 position: relative;
                 margin-bottom: 0;
+                @media (max-width: 991px) {
+                    height: 600px;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    left: 0;
+                }
                 
                 .slide {
                     background-repeat: no-repeat;
@@ -215,5 +241,17 @@
                 }
             }
         }
+    }
+}
+
+.back {
+    float: right;
+    background: none;
+    border: none;
+    color: #aaaaaa;
+    font: 13px $mb;
+    text-transform: uppercase;
+    i {
+        margin-right: 5px;
     }
 }
