@@ -196,8 +196,14 @@ jQuery(document).ready(function($) {
     -------------------------*/
     if ( $('.scroll').length > 0 ) {
         $('.scroll').perfectScrollbar();
+        if ( $(window).width < 992 ) {
+            $('.scroll').perfectScrollbar('destroy');
+        }
         $(window).resize(function(event) {
             $('.scroll').perfectScrollbar('update');
+            if ( $(window).width < 992 ) {
+                $('.scroll').perfectScrollbar('destroy');
+            }
         });    
     }
 
