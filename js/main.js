@@ -158,6 +158,7 @@ jQuery(document).ready(function($) {
         }, 0);
     }
 
+
     $('form').on('submit', function(event) {
         event.preventDefault();
         /* Act on the event */
@@ -188,17 +189,13 @@ jQuery(document).ready(function($) {
     /*----------------------------
                               CUSTOM SCROLLBAR
     -------------------------*/
-    $('.scroll').perfectScrollbar();
-    $(window).resize(function(event) {
-        $('.scroll').perfectScrollbar('update');
-    });
 
 
     /*----------------------------
                               SLIDER
     -------------------------*/
 
-    $('.slider').on('init', function(event, slick){
+    $('.slider, .roomslider').on('init', function(event, slick){
         $(slick.$slides[0]).css('background-image', 'url('+$(slick.$slides[0]).data('image')+')');
         $(slick.$slides[1]).css('background-image', 'url('+$(slick.$slides[1]).data('image')+')');
 
@@ -208,10 +205,12 @@ jQuery(document).ready(function($) {
         $('.counter .current').text(1)
     });
 
-    $('.slider').on('afterChange', function(event, slick, currentSlide){
+    $('.slider, .roomslider').on('afterChange', function(event, slick, currentSlide){
         $(slick.$slides[currentSlide+1]).css('background-image', 'url('+$(slick.$slides[currentSlide+1]).data('image')+')');
         $('.counter .current').text(currentSlide+1)
     });
+
+
 
     /*initialization*/
     if ( $('.slider').length > 0 ) {
@@ -221,7 +220,29 @@ jQuery(document).ready(function($) {
         })    
     }
     
+    $('.room').click(function(){
+        var roomDetails = $(this).find('.room__info__details');
+        roomDetails.css({
+                'position': 'fixed',
+                'max-width': '3000px',
+                'height': '100%',
+                'left': '140px',
+                'transform': 'scale(1)'
+        });
+        roomDetails.children('.column').css('display', 'block');
+        roomDetails.find('.roomslider').slick();
+    });
 
+    $('.back').click(function(){
+        var parent = $(this).parent().parent();
+        parent.find('.roomslider').unslick();
+        parent.css({
+            'position': 'absolute',
+            'max-width': '1px',
+            'height': '0',
+            'transform': 'scale(0)'
+        });
+    });
 
 
 

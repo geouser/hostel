@@ -1,0 +1,224 @@
+.rooms {
+    @include flex($justify: flex-start, $wrap: wrap);
+    padding-top: 40px;
+    margin-top: 45px;
+    border-top: 1px solid #d7dbd9;
+}
+.room {
+    margin-right: 20px;
+    background-color: #FFF;
+    cursor: pointer;
+    margin-bottom: 90px;
+    position: relative;
+    &:hover {
+        -webkit-box-shadow: 0 0 20px rgba(0,0,0, .1);
+        box-shadow: 0 0 20px rgba(0,0,0, .1); 
+    }
+    &:nth-of-type(4n) {
+        margin-right: 0;
+    }
+    &__img {
+        height: 270px;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            background-color: rgba(106,53,0, .5);
+            -webkit-transition: visibility 0s, opacity .2s;
+               -moz-transition: visibility 0s, opacity .2s;
+                -ms-transition: visibility 0s, opacity .2s;
+                 -o-transition: visibility 0s, opacity .2s;
+                    transition: visibility 0s, opacity .2s;
+        }
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            background-image: url("../images/expand_icon.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            -webkit-transition: visibility 0s, opacity .2s;
+               -moz-transition: visibility 0s, opacity .2s;
+                -ms-transition: visibility 0s, opacity .2s;
+                 -o-transition: visibility 0s, opacity .2s;
+                    transition: visibility 0s, opacity .2s;
+        }
+    }
+    &__info {
+        padding: 25px 20px 20px;
+        h3 {
+            font: 13px $mb;
+            text-transform: uppercase;
+            color: #858585;
+            @include transition(all, .2s);
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+                width: 7px;
+                height: 7px;
+                background-color: #858585;
+                @include transition(all, .2s);
+            }
+        }
+        &__include {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #d7dbd9;
+            font-size: 16px;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &__count {
+                &:before {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-bottom: 4px;
+                    margin-right: 4px;
+                    content: "";
+                    background-image: url("../images/person_icon.png");
+                    width: 16px;
+                    height: 19px;
+                    background-repeat: no-repeat;
+                }
+                &:after {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 2px 0 4px;
+                    content: "/";
+                }
+            }
+            &__rent {
+                float: right;
+                color: #51BCEA;
+                font-size: 22px;
+                &:after {
+                    display: inline-block;
+                    margin-left: 4px;
+                    content: "";
+                    background-image: url("../images/currency__icon.png");
+                    width: 23px;
+                    height: 16px;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        &__details {
+            height: 1px;
+            max-width: 1px;
+            position: absolute;
+            background-color: #FFF;
+            z-index: 100;
+            right: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            -webkit-transform: scale(0);
+               -moz-transform: scale(0);
+                -ms-transform: scale(0);
+                 -o-transform: scale(0);
+                    transform: scale(0);
+            -webkit-transition: transform .4s;
+               -moz-transition: transform .4s;
+                -ms-transition: transform .4s;
+                 -o-transition: transform .4s;
+                    transition: transform .4s;
+            .column {
+                display: none;
+            }
+            &.active {
+                position: fixed;
+                max-width: 3000px;
+                height: 100%;
+                 -webkit-transform: scale(1);
+               -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                 -o-transform: scale(1);
+                    transform: scale(1);
+                .column {
+                    display: block;
+                }
+            }
+
+            .roomslider {
+                height: 100%;
+                position: relative;
+                margin-bottom: 0;
+                .slide {
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    background-size: cover;
+                }
+
+                .slick-arrow {
+                    bottom: 40px;
+                    top: auto;
+                    margin-top: 0;
+                    z-index: 10;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    &:before {
+                        font-family: unset;
+                        color: $brown;
+                        font-size: 25px;
+                        line-height: 15px;
+                    }
+
+                    &.slick-prev {
+                        left: 80px;
+                    }
+                    &.slick-next {
+                        left: 150px;
+                    }
+                }
+
+                .counter {
+                    position: absolute;
+                    bottom: 110px;
+                    left: 80px;
+                    color: #fff;
+                    font-size: 35px;
+                    font-family: $pdr;
+                }
+            }
+        }
+    }
+    &:hover {
+        .room__img {
+            &:before,
+            &:after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        .room__info {
+            h3 {
+                color: $brown;
+                &:before {
+                    background-color: $brown;
+                }
+            }
+        }
+    }
+}
