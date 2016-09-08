@@ -209,6 +209,13 @@ jQuery(document).ready(function($) {
         });    
     }
 
+    if ( $('.menu-scroll').length > 0 ) {
+        $('.menu-scroll').perfectScrollbar();
+        $(window).resize(function(event) {
+            $('.menu-scroll').perfectScrollbar('update');
+        });  
+    }
+
 
     /*----------------------------
                               SLIDER
