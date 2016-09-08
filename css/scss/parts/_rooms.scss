@@ -174,8 +174,9 @@
                 height: 100%;
                 position: relative;
                 margin-bottom: 0;
+                
                 @media (max-width: 991px) {
-                    height: 600px;
+                    height: 100%;
                     position: absolute;
                     width: 100%;
                     bottom: 0;

@@ -1764,7 +1764,7 @@ img.mfp-img {
   -o-transform-origin: left bottom;
   transform-origin: left bottom;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .sidebar .copyright {
     left: 60px;
   }
@@ -2385,7 +2385,7 @@ img.mfp-img {
 }
 @media (max-width: 991px) {
   .room__info__details .roomslider {
-    height: 600px;
+    height: 100%;
     position: absolute;
     width: 100%;
     bottom: 0;

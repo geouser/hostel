@@ -274,7 +274,8 @@ jQuery(document).ready(function($) {
 
         if ( $('.roomslider').length > 0 ) {
             $('.roomslider').slick({
-                infinite: false
+                infinite: false,
+                fade: true
             });
         }
 
