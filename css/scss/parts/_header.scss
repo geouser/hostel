@@ -67,6 +67,7 @@
             padding-right: 80px;
             text-align: left;
             .builtAt {
+                padding-top: 4px;
                 float: right;
                 font: 13px $mm;
                 text-transform: uppercase;
@@ -205,6 +206,11 @@
                 font: 22px $pdb;
                 color: #888888;
                 margin-bottom: 4px;
+            }
+            @include mh800 {
+                a {
+                    font: 24px/45px $pdb;
+                }
             }
             @media (max-height: 600px) {
                 a {
