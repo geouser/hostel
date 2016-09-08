@@ -1,0 +1,104 @@
+.contacts {
+	@include flex($alignI: stretch);
+	padding-top: 100px;
+
+	&__form {
+		width: 440px;
+
+		@media (max-width: 1700px) {
+			width: 50%;
+		}
+	}
+
+	&__info {
+		width: -webkit-calc(100% - 440px);
+		width: calc(100% - 440px);
+		position: relative;
+
+		@media (max-width: 1700px) {
+			width: 50%;
+		}
+
+		.address,
+		.phones,
+		.email {
+			padding-left: 25px;
+			position: relative;
+			margin-bottom: 30px;
+
+			i {
+				position: absolute;
+				top: 2px;
+				left: 0;
+			}
+
+			a {
+				display: block;
+			}
+		}
+
+		.email a {
+			color: $blue;
+			text-decoration: underline;
+		}
+	}
+
+	.social {
+		position: absolute;
+		bottom: 25px;
+		left: 0;
+	}
+}
+
+
+.form {
+	width: 100%;
+	position: relative;
+
+	input {
+		height: 60px;
+		border-radius: 30px;
+		background-color: #fff;
+		text-align: center;
+		border: 0;
+		width: 100%;
+		margin: 6px 0;
+		font-family: $mb;
+		font-size: 13px;
+		padding: 0 10px;
+	}
+
+	textarea {
+		width: 100%;
+		background-color: #fff;
+		border-radius: 30px;
+		text-align: center;
+		height: 325px;
+		padding: 0 10px;
+		border: 0;
+		border-bottom: 83px solid transparent;
+		border-top: 24px solid transparent;
+		margin: 6px 0 0;
+		font-family: $mb;
+		font-size: 13px;
+		resize: none;
+		position: relative;
+	}
+
+	.button {
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+}
+
+.icon-email, .icon-phone, .icon-pin
+{ display: inline-block; background: url('../images/contacts-icons.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+.icon-email { background-position: -5px -0px; width: 17px; height: 17px; margin-top: 2px;}
+.icon-phone { background-position: -5px -22px; width: 15px; height: 16px; margin-top: 1px;}
+.icon-pin { background-position: -5px -43px; width: 14px; height: 20px; }
