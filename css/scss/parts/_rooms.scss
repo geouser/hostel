@@ -59,7 +59,7 @@
     }
     &__info {
         padding: 25px 20px 20px;
-        h3 {
+        > h3 {
             font: 13px $mb;
             text-transform: uppercase;
             color: #858585;
@@ -120,9 +120,10 @@
         }
 
         &__details {
-            height: 1px;
-            max-width: 1px;
+            border-radius: 50%;
             position: absolute;
+            height: 100%;
+            width: 100%;
             background-color: #FFF;
             z-index: 100;
             right: 0;
@@ -135,32 +136,20 @@
                 -ms-transform: scale(0);
                  -o-transform: scale(0);
                     transform: scale(0);
-            -webkit-transition: transform .4s;
-               -moz-transition: transform .4s;
-                -ms-transition: transform .4s;
-                 -o-transition: transform .4s;
-                    transition: transform .4s;
             .column {
                 display: none;
             }
-            &.active {
-                position: fixed;
-                max-width: 3000px;
-                height: 100%;
-                 -webkit-transform: scale(1);
-               -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                 -o-transform: scale(1);
-                    transform: scale(1);
-                .column {
-                    display: block;
-                }
+            h2 {
+                font-size: 30px;
+                margin-top: 80px;
+                text-transform: uppercase;
             }
 
             .roomslider {
                 height: 100%;
                 position: relative;
                 margin-bottom: 0;
+                
                 .slide {
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
@@ -213,7 +202,7 @@
             }
         }
         .room__info {
-            h3 {
+            > h3 {
                 color: $brown;
                 &:before {
                     background-color: $brown;
