@@ -200,8 +200,6 @@ jQuery(document).ready(function($) {
     /*----------------------------
                               SLIDER
     -------------------------*/
-
-
     /*initialization*/
     if ( $('.slider').length > 0 ) {
         $('.slider').slick({
@@ -249,7 +247,7 @@ jQuery(document).ready(function($) {
                     'transition' : '.4s transform .2s'
             });
             roomDetails.children('.column').css('display', 'block');
-            roomDetails.find('.roomslider').slick();
+            roomDetails.find('.roomslider').slick('setPosition');
         });
 
         $('.roomslider').on('init', function(event, slick){
@@ -267,6 +265,11 @@ jQuery(document).ready(function($) {
             $('.counter .current').text(currentSlide+1)
         });
 
+        if ( $('.roomslider').length > 0 ) {
+            $('.roomslider').slick({
+                infinite: false
+            });
+        }
 
     
 
