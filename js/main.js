@@ -89,7 +89,8 @@ jQuery(document).ready(function($) {
     });
 
     $('.mainslider').slick({
-        fade: true
+        fade: true,
+        arrows: false
     });
 
     /*---------------------------

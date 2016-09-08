@@ -2735,7 +2735,7 @@ img.mfp-img {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 .contacts__form {
   width: 440px;
