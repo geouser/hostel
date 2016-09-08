@@ -53,6 +53,9 @@
                     margin: 20px auto;
                 }
             }
+            @media (max-width: 800px) {
+                 padding-left: 100px;
+            }
             @media (max-width: 600px) {
                 padding-left: 0px;
                 padding-top: 60px;
