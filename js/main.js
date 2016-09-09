@@ -272,6 +272,7 @@ jQuery(document).ready(function($) {
             });
             roomDetails.children('.column').css('display', 'block');
             roomDetails.find('.roomslider').slick('setPosition');
+            roomDetails.find('.roomslider').slick('slickPlay');
         });
 
         $('.roomslider').on('init', function(event, slick){
@@ -292,7 +293,8 @@ jQuery(document).ready(function($) {
         if ( $('.roomslider').length > 0 ) {
             $('.roomslider').slick({
                 infinite: false,
-                fade: true
+                fade: true,
+                waitForAnimate: false
             });
         }
 
