@@ -1953,47 +1953,6 @@ img.mfp-img {
         font-size: 30px;
         margin-top: 80px;
         text-transform: uppercase; }
-      .room__info__details .roomslider {
-        height: 100%;
-        position: relative;
-        margin-bottom: 0; }
-        @media (max-width: 991px) {
-          .room__info__details .roomslider {
-            height: 100%;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            left: 0; } }
-        .room__info__details .roomslider .slide {
-          background-repeat: no-repeat;
-          background-position: 50% 50%;
-          background-size: cover; }
-        .room__info__details .roomslider .slick-arrow {
-          bottom: 40px;
-          top: auto;
-          margin-top: 0;
-          z-index: 10;
-          width: 60px;
-          height: 60px;
-          background-color: #fff;
-          border-radius: 50%;
-          overflow: hidden; }
-          .room__info__details .roomslider .slick-arrow:before {
-            font-family: unset;
-            color: #6A474B;
-            font-size: 25px;
-            line-height: 15px; }
-          .room__info__details .roomslider .slick-arrow.slick-prev {
-            left: 80px; }
-          .room__info__details .roomslider .slick-arrow.slick-next {
-            left: 150px; }
-        .room__info__details .roomslider .counter {
-          position: absolute;
-          bottom: 130px;
-          left: 80px;
-          color: #fff;
-          font-size: 35px;
-          font-family: "Playfair Display Regular"; }
   .room:hover .room__img:before, .room:hover .room__img:after {
     visibility: visible;
     opacity: 1; }
@@ -2051,22 +2010,22 @@ a.button {
 .slick-slider .slick-list {
   height: 100%; }
 
-.slider {
+.slider, .room__info__details .roomslider {
   height: 100%;
   position: relative;
   margin-bottom: 0; }
   @media (max-width: 991px) {
-    .slider {
+    .slider, .room__info__details .roomslider {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0; } }
-  .slider .slide {
+  .slider .slide, .room__info__details .roomslider .slide {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover; }
-  .slider .slick-arrow {
+  .slider .slick-arrow, .room__info__details .roomslider .slick-arrow {
     bottom: 40px;
     top: auto;
     margin-top: 0;
@@ -2077,34 +2036,34 @@ a.button {
     border-radius: 50%;
     overflow: hidden; }
     @media (max-width: 767px) {
-      .slider .slick-arrow {
+      .slider .slick-arrow, .room__info__details .roomslider .slick-arrow {
         bottom: 20px; } }
-    .slider .slick-arrow:before {
+    .slider .slick-arrow:before, .room__info__details .roomslider .slick-arrow:before {
       font-family: unset;
       color: #6A474B;
       font-size: 25px;
       line-height: 15px; }
-    .slider .slick-arrow.slick-prev {
+    .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
       left: 80px; }
       @media (max-width: 767px) {
-        .slider .slick-arrow.slick-prev {
+        .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
           left: 20px; } }
-    .slider .slick-arrow.slick-next {
+    .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
       left: 150px; }
       @media (max-width: 767px) {
-        .slider .slick-arrow.slick-next {
+        .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
           left: 90px; } }
-  .slider .counter {
+  .slider .counter, .room__info__details .roomslider .counter {
     position: absolute;
     bottom: 110px;
     left: 80px;
     color: #fff;
     font-size: 35px;
     font-family: "Playfair Display Regular"; }
-    .slider .counter span {
+    .slider .counter span, .room__info__details .roomslider .counter span {
       color: #fff; }
     @media (max-width: 767px) {
-      .slider .counter {
+      .slider .counter, .room__info__details .roomslider .counter {
         left: 20px;
         bottom: 90px; } }
 
