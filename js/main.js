@@ -90,7 +90,9 @@ jQuery(document).ready(function($) {
 
     $('.mainslider').slick({
         fade: true,
-        arrows: false
+        arrows: false,
+        autoplay: true,
+        speed: 800
     });
 
     /*---------------------------

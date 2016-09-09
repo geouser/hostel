@@ -15,61 +15,64 @@
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
-        .wrap {
-            height: 100%;
-            padding-left: 220px;
-            @include flex($direction: column, $alignI: flex-start, $justify: center);
-            color: #FFF;
-            text-align: left;
+    }
+}
+
+.indexMain {
+    position: relative;z-index: 10;
+    background: transparent;
+    .wrap {
+        height: 100%;
+        padding-left: 60px;
+        @include flex($direction: column, $alignI: flex-start, $justify: center);
+        color: #FFF;
+        text-align: left;
+        h2 {
+            font: 40px/50px $pdb;
+            margin-bottom: 40px;
+            width: 900px;
+            text-shadow: 1px 0 1px rgba(0,0,0,.15);
+        }
+        p {
+            font: 16px/20px $mr;
+            width: 750px;
+            text-shadow: 1px 0 1px rgba(0,0,0,.15);
+            font-weight: normal;
+        }
+        .button {
+            margin-top: 40px;
+        }
+        @media (max-width: 1100px) {
             h2 {
-                font: 40px/50px $pdb;
-                margin-bottom: 40px;
-                width: 900px;
-                text-shadow: 1px 0 1px rgba(0,0,0,.15);
+                width: 95%;
+                text-align: center;
+                font: 32px/40px $pdb;
+                margin: 10px auto;
             }
             p {
-                font: 16px/20px $mr;
-                width: 600px;
-                text-shadow: 1px 0 1px rgba(0,0,0,.15);
-                font-weight: normal;
+                width: 80%;
+                margin: 10px auto;
+                text-align: center;
             }
             button {
-                margin-top: 40px;
+                margin: 20px auto;
             }
-            @media (max-width: 1100px) {
-                padding-left: 140px;
-                h2 {
-                    width: 95%;
-                    text-align: center;
-                    font: 32px/40px $pdb;
-                    margin: 10px auto;
-                }
-                p {
-                    width: 80%;
-                    margin: 10px auto;
-                    text-align: center;
-                }
-                button {
-                    margin: 20px auto;
-                }
+        }
+        @media (max-width: 800px) {
+        }
+        @media (max-width: 750px) {
+            padding-left: 0px;
+            padding-top: 60px;
+            h2 {
+                font: 28px/38px $pdb;
             }
-            @media (max-width: 800px) {
-                 padding-left: 100px;
+            p {
+                font-size: 14px;
             }
-            @media (max-width: 600px) {
-                padding-left: 0px;
-                padding-top: 60px;
-                h2 {
-                    font: 28px/38px $pdb;
-                }
-                p {
-                    font-size: 14px;
-                }
-            }
-            @media (max-width: 400px) {
-                h2 {
-                    font: 24px/34px $pdb;
-                }
+        }
+        @media (max-width: 400px) {
+            h2 {
+                font: 24px/34px $pdb;
             }
         }
     }
