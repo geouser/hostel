@@ -2151,7 +2151,7 @@ img.mfp-img {
     margin: 10px auto;
     text-align: center;
   }
-  .indexMain .wrap button {
+  .indexMain .wrap .button {
     margin: 20px auto;
   }
 }
@@ -2493,7 +2493,7 @@ img.mfp-img {
 
 a.button {
   line-height: 50px;
-  display: inline-block;
+  display: block;
 }
 
 .slick-slider .slick-track,
@@ -2565,6 +2565,9 @@ a.button {
   color: #fff;
   font-size: 35px;
   font-family: "Playfair Display Regular";
+}
+.slider .counter span {
+  color: #fff;
 }
 @media (max-width: 767px) {
   .slider .counter {
