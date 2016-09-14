@@ -237,7 +237,7 @@
                 font: 26px/50px $pdb;
                 color: $grey;
                 @include transition(all, .2s);             
-                &:hover {}
+                &:hover {color: #81575B;}
             }
             a:before {
                 content: "";

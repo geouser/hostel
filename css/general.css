@@ -1746,6 +1746,9 @@ img.mfp-img {
   -ms-transition: all 0.2s;
   transition: all 0.2s;
 }
+.mainNav ul li a:hover {
+  color: #81575B;
+}
 .mainNav ul li a:before {
   content: "";
   display: inline-block;
@@ -2347,11 +2350,15 @@ img.mfp-img {
 }
 
 .room {
-  margin: 0 10px 90px 10px;
+  margin: 0 10px 0px 10px;
   background-color: #FFF;
   cursor: pointer;
-  margin-bottom: 90px;
   position: relative;
+}
+.room + hr {
+  display: block;
+  width: 100%;
+  margin: 45px 0;
 }
 .room:hover {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -2683,9 +2690,10 @@ a.button {
 
 .services-link {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   color: #1da6e1;
   font-size: 16px;
+  text-decoration: underline;
 }
 @media (max-width: 991px) {
   .services-link {
@@ -2706,6 +2714,10 @@ a.button {
   vertical-align: middle;
   margin-top: -4px;
   margin-right: 5px;
+}
+
+.viewport .column--content {
+  padding-bottom: 80px;
 }
 
 .services {
