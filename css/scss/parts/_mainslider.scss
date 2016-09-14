@@ -27,11 +27,21 @@
         @include flex($direction: column, $alignI: flex-start, $justify: center);
         color: #FFF;
         text-align: left;
+        position: relative;
+        .heading {
+            position: absolute;
+            top: 0px;
+            left: 68px;
+            @include m800 {
+                
+            }
+        }
         h2 {
             font: 40px/50px $pdb;
             margin-bottom: 40px;
             width: 900px;
             text-shadow: 1px 0 1px rgba(0,0,0,.15);
+            color: #FFF;
         }
         p {
             font: 16px/20px $mr;
@@ -59,12 +69,17 @@
             }
         }
         @media (max-width: 800px) {
+
         }
         @media (max-width: 750px) {
             padding-left: 0px;
             padding-top: 60px;
+            padding-bottom: 30px;
+            .heading {
+                top: -20px;
+            }
             h2 {
-                font: 28px/38px $pdb;
+                font: 26px/34px $pdb;
             }
             p {
                 font-size: 14px;
@@ -72,8 +87,63 @@
         }
         @media (max-width: 400px) {
             h2 {
-                font: 24px/34px $pdb;
+                font: 22px/28px $pdb;
             }
         }
     }
 }
+
+.languages {
+    position: absolute;
+    bottom: 120px;
+    right: 120px;
+    z-index: 100;
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 12px;
+        color: #FFF;
+        text-transform: uppercase;
+        font: 12px $mb;
+        &.active {
+            color: #ff7315;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #6b6968;
+        top: 130%;
+        right: 16px;
+        opacity: .8;
+    }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 200px;
+        background-color: #6b6968;
+        opacity: .8;
+        top: 140%;
+        right: 19px;
+    }
+    @include m800 {
+        &:after,
+        &:before {
+            display: none;
+        }
+    }
+    @include m800 {
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        
+    }
+}
+

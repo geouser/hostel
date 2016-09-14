@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
                 'left': '0%',
                 'transition-delay': '.0s'
             });
-            $('.sideMenu .wrapper').css({
+            $('.sideMenu .wrapHeadInfo').css({
                 'opacity': '1',
                 'transition': 'opacity .2s .4s'
             });
@@ -58,8 +58,8 @@ jQuery(document).ready(function($) {
                 });
             } else  {
                 $('.circle').css({
-                    'width': '1600px',
-                    'height': '1600px',
+                    'width': '1800px',
+                    'height': '1800px',
                 });
             }
             $('body').css('overflow', 'hidden');
@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
                 'height': '1px',
                 'border-radius': '50%'
             });
-            $('.sideMenu .wrapper').css({
+            $('.sideMenu .wrapHeadInfo').css({
                 'transition-delay': '0s',
                 'opacity': '0'
             });
