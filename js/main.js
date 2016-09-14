@@ -120,6 +120,7 @@ jQuery(document).ready(function($) {
         arrows: false,
         speed: 300,
         slidesToShow: 3,
+        autoplay: true,
         slidesToScroll: 1,
         daptiveHeight: true,
         responsive: [
