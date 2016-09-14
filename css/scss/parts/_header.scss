@@ -37,8 +37,8 @@
     }
     &.active {
         &:after {
-            -webkit-animation: moveLeft 1s forwards; /* Chrome, Safari, Opera */
-            animation: moveLeft 1s forwards;
+            -webkit-animation: 1.4s moveLeft .1s forwards; /* Chrome, Safari, Opera */
+            animation: 1.4s moveLeft .1s forwards;
         }
     }
     @include mh700 {
