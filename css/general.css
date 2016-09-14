@@ -1426,6 +1426,11 @@ img.mfp-img {
   color: #6A474B;
   margin-bottom: 74px;
 }
+@media (max-height: 800px) {
+  .content .heading {
+    margin-bottom: 30px;
+  }
+}
 .content .heading:before {
   content: "";
   display: block;
@@ -1434,6 +1439,12 @@ img.mfp-img {
   background-position: 50% 100%;
   width: 7px;
   height: 145px;
+}
+@media (max-height: 800px) {
+  .content .heading:before {
+    height: 60px;
+    margin-bottom: 8px;
+  }
 }
 @media (max-width: 991px) {
   .content .heading:before {
@@ -2872,7 +2883,12 @@ a.button {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 80px;
+  padding-top: 60px;
+}
+@media (max-height: 800px) {
+  .contacts {
+    padding-top: 40px;
+  }
 }
 .contacts__form {
   width: 440px;
@@ -2953,6 +2969,11 @@ a.button {
   font-size: 13px;
   padding: 0 10px;
 }
+@media (max-height: 720px) {
+  .form input {
+    height: 45px;
+  }
+}
 .form textarea {
   width: 100%;
   background-color: #fff;
@@ -2969,6 +2990,16 @@ a.button {
   resize: none;
   position: relative;
 }
+@media (max-height: 800px) {
+  .form textarea {
+    height: 250px;
+  }
+}
+@media (max-height: 720px) {
+  .form textarea {
+    height: 200px;
+  }
+}
 .form .button {
   position: absolute;
   bottom: 12px;
@@ -2977,6 +3008,12 @@ a.button {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+@media (max-height: 800px) {
+  .form .button {
+    height: 45px;
+    width: 160px;
+  }
 }
 
 .icon-email, .icon-phone, .icon-pin {

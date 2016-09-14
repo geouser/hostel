@@ -1,7 +1,9 @@
 .contacts {
 	@include flex($alignI: stretch);
-	padding-top: 80px;
-
+	padding-top: 60px;
+	@media (max-height: 800px) {
+       padding-top: 40px;
+    }
 	&__form {
 		width: 440px;
 
@@ -79,6 +81,9 @@
 		font-family: $mb;
 		font-size: 13px;
 		padding: 0 10px;
+		@media (max-height: 720px) {
+           height: 45px;
+        }
 	}
 
 	textarea {
@@ -96,6 +101,12 @@
 		font-size: 13px;
 		resize: none;
 		position: relative;
+		@media (max-height: 800px) {
+           height: 250px;
+        }
+        @media (max-height: 720px) {
+           height: 200px;
+        }
 	}
 
 	.button {
@@ -106,6 +117,10 @@
 		-ms-transform: translateX(-50%);
 		-o-transform: translateX(-50%);
 		transform: translateX(-50%);
+		@media (max-height: 800px) {
+           height: 45px;
+           width: 160px;
+        }
 	}
 }
 
