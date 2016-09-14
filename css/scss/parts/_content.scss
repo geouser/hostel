@@ -25,11 +25,20 @@
 			background-position: 50% 100%;
 			width: 7px;
 			height: 145px;
+			@media ($tablets) {
+				margin-bottom: 5px;
+			}
 			@media (max-height: 600px) {
 				height: 45px;
 			}
 			@media (max-width: 600px) {
 				height: 45px;
+			}
+		}
+		&--white {
+			color: #FFF;
+			&:before {
+				background-image: url("../images/before_grey.png");
 			}
 		}
 		@media (max-width: 600px) {
