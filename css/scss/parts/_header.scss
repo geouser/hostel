@@ -143,6 +143,9 @@
         /*.............end media..............*/
 }
 
+
+
+
 .social {
     display: inline-block;
     &__item {
@@ -153,22 +156,15 @@
         width: 17px;
         height: 16px;
         background-repeat: no-repeat;
-        &--fb {
-            background-position: 0 0;
-        }
-        &--tw {
-            background-position: -59px 0;
-            width: 22px;
-        }
-        &--vm {
-            background-position: -27px 0px;
-            width: 19px;
-        }
-        &--inst {
-            background-position: -96px 0;
-            width: 22px;
-            margin-right: 0;
-        }
+        
+        &.tw:hover { background-position: -5px -0px; width: 22px; height: 15px; }
+        &.tw { background-position: -5px -20px; width: 22px; height: 15px; }
+        &.vm:hover { background-position: -5px -40px; width: 17px; height: 15px; }
+        &.vm { background-position: -5px -60px; width: 17px; height: 15px; }
+        &.lnk:hover { background-position: -5px -80px; width: 16px; height: 16px; }
+        &.lnk { background-position: -5px -101px; width: 16px; height: 16px; }
+        &.fb:hover { background-position: -5px -122px; width: 9px; height: 16px; }
+        &.fb { background-position: -5px -143px; width: 9px; height: 16px; }
     }
 }
 .circle {

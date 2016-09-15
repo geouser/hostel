@@ -30,12 +30,19 @@
 		z-index: 20;
 		width: 60px;
 		height: 60px;
-		background-color: #fff;
+		/*background-color: #fff;*/
 		border-radius: 50%;
 		overflow: hidden;
 		display: block;
 		opacity: 1;
 		visibility: visible;
+		background-size: 100%;
+		background-repeat: no-repeat;
+
+		&.slick-disabled {
+			-webkit-filter: grayscale(100%) brightness(2); /* Chrome, Safari, Opera */
+    		filter: grayscale(100%) brightness(2);
+		}
 
 		@media ($phones) {
 			bottom: 20px;
@@ -46,10 +53,12 @@
 			color: $brown;
 			font-size: 25px;
 			line-height: 15px;
+			display: none;
 		}
 
 		&.slick-prev {
 			left: 80px;
+			background-image: url(../images/arrow-prev.png);
 
 			@media ($phones) {
 				left: 20px;
@@ -57,6 +66,7 @@
 		}
 		&.slick-next {
 			left: 150px;
+			background-image: url(../images/arrow-next.png);
 
 			@media ($phones) {
 				left: 90px;
