@@ -2836,7 +2836,7 @@ a.button {
   position: absolute;
   top: 0;
   left: 60px;
-  z-index: 10;
+  z-index: 20;
 }
 @media (max-width: 767px) {
   .heading--gallery {

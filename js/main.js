@@ -41,6 +41,8 @@ jQuery(document).ready(function($) {
             $('<hr>').insertAfter('.room:nth-of-type(1n)');
         }
 
+        $('.rooms hr').last().remove();
+
     });
 
     /*---------------------------
