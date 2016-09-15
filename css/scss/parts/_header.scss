@@ -37,8 +37,8 @@
     }
     &.active {
         &:after {
-            -webkit-animation: moveLeft 1s forwards; /* Chrome, Safari, Opera */
-            animation: moveLeft 1s forwards;
+            -webkit-animation: 1.4s moveLeft .1s forwards; /* Chrome, Safari, Opera */
+            animation: 1.4s moveLeft .1s forwards;
         }
     }
     @include mh700 {
@@ -237,7 +237,7 @@
                 font: 26px/50px $pdb;
                 color: $grey;
                 @include transition(all, .2s);             
-                &:hover {}
+                &:hover {color: #81575B;}
             }
             a:before {
                 content: "";

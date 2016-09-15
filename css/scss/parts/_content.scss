@@ -1,3 +1,4 @@
+
 .content {
 	height: 100%;
 	position: relative;
@@ -16,6 +17,9 @@
 		font-family: $mb;
 		color: $brown;
 		margin-bottom: 74px;
+		@media (max-height: 800px) {
+           margin-bottom: 30px;
+        }
 
 		&:before {
 			content: "";
@@ -25,6 +29,10 @@
 			background-position: 50% 100%;
 			width: 7px;
 			height: 145px;
+			@media (max-height: 800px) {
+	           height: 60px;
+	           margin-bottom: 8px;
+	        }
 			@media ($tablets) {
 				margin-bottom: 5px;
 			}

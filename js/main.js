@@ -22,6 +22,18 @@ jQuery(document).ready(function($) {
         });
     });
       
+    if ($(window).width() < 1916 && $(window).width() > 1496 ) {
+        $('<hr>').insertAfter('.room:nth-of-type(3n)');
+    } 
+    if ($(window).width() > 1916) {
+        $('<hr>').insertAfter('.room:nth-of-type(4n)');
+    }
+    if ($(window).width() < 1496 && $(window).width() > 875 ) {
+        $('<hr>').insertAfter('.room:nth-of-type(2n)');
+    }
+    if ($(window).width() < 875) {
+        $('<hr>').insertAfter('.room:nth-of-type(1n)');
+    }
 
     /*---------------------------
                                   MENU TOGGLE

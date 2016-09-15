@@ -1426,6 +1426,11 @@ img.mfp-img {
   color: #6A474B;
   margin-bottom: 74px;
 }
+@media (max-height: 800px) {
+  .content .heading {
+    margin-bottom: 30px;
+  }
+}
 .content .heading:before {
   content: "";
   display: block;
@@ -1434,6 +1439,12 @@ img.mfp-img {
   background-position: 50% 100%;
   width: 7px;
   height: 145px;
+}
+@media (max-height: 800px) {
+  .content .heading:before {
+    height: 60px;
+    margin-bottom: 8px;
+  }
 }
 @media (max-width: 991px) {
   .content .heading:before {
@@ -1527,9 +1538,9 @@ img.mfp-img {
   }
 }
 .sideMenu.active:after {
-  -webkit-animation: moveLeft 1s forwards;
+  -webkit-animation: 1.4s moveLeft .1s forwards;
   /* Chrome, Safari, Opera */
-  animation: moveLeft 1s forwards;
+  animation: 1.4s moveLeft .1s forwards;
 }
 .sideMenu .wrapper {
   position: relative;
@@ -1745,6 +1756,9 @@ img.mfp-img {
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
+}
+.mainNav ul li a:hover {
+  color: #81575B;
 }
 .mainNav ul li a:before {
   content: "";
@@ -2347,11 +2361,15 @@ img.mfp-img {
 }
 
 .room {
-  margin: 0 10px 90px 10px;
+  margin: 0 10px 0px 10px;
   background-color: #FFF;
   cursor: pointer;
-  margin-bottom: 90px;
   position: relative;
+}
+.room + hr {
+  display: block;
+  width: 100%;
+  margin: 45px 0;
 }
 .room:hover {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -2683,9 +2701,10 @@ a.button {
 
 .services-link {
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   color: #1da6e1;
   font-size: 16px;
+  text-decoration: underline;
 }
 @media (max-width: 991px) {
   .services-link {
@@ -2706,6 +2725,10 @@ a.button {
   vertical-align: middle;
   margin-top: -4px;
   margin-right: 5px;
+}
+
+.viewport .column--content {
+  padding-bottom: 80px;
 }
 
 .services {
@@ -2860,7 +2883,12 @@ a.button {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 80px;
+  padding-top: 60px;
+}
+@media (max-height: 800px) {
+  .contacts {
+    padding-top: 40px;
+  }
 }
 .contacts__form {
   width: 440px;
@@ -2941,6 +2969,11 @@ a.button {
   font-size: 13px;
   padding: 0 10px;
 }
+@media (max-height: 720px) {
+  .form input {
+    height: 45px;
+  }
+}
 .form textarea {
   width: 100%;
   background-color: #fff;
@@ -2957,6 +2990,16 @@ a.button {
   resize: none;
   position: relative;
 }
+@media (max-height: 800px) {
+  .form textarea {
+    height: 250px;
+  }
+}
+@media (max-height: 720px) {
+  .form textarea {
+    height: 200px;
+  }
+}
 .form .button {
   position: absolute;
   bottom: 12px;
@@ -2965,6 +3008,12 @@ a.button {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+@media (max-height: 800px) {
+  .form .button {
+    height: 45px;
+    width: 160px;
+  }
 }
 
 .icon-email, .icon-phone, .icon-pin {
