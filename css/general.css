@@ -2674,11 +2674,6 @@ a.button {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.slider .slick-arrow.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-disabled {
-  -webkit-filter: grayscale(100%) brightness(2);
-  /* Chrome, Safari, Opera */
-  filter: grayscale(100%) brightness(2);
-}
 @media (max-width: 767px) {
   .slider .slick-arrow, .room__info__details .roomslider .slick-arrow {
     bottom: 20px;
@@ -2693,7 +2688,10 @@ a.button {
 }
 .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
   left: 80px;
-  background-image: url(../images/arrow-prev.png);
+  background-image: url(../images/arrow-prev.svg);
+}
+.slider .slick-arrow.slick-prev.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-prev.slick-disabled {
+  background-image: url(../images/arrow-prev-disabled.svg);
 }
 @media (max-width: 767px) {
   .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
@@ -2702,7 +2700,10 @@ a.button {
 }
 .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
   left: 150px;
-  background-image: url(../images/arrow-next.png);
+  background-image: url(../images/arrow-next.svg);
+}
+.slider .slick-arrow.slick-next.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-next.slick-disabled {
+  background-image: url(../images/arrow-next-disabled.svg);
 }
 @media (max-width: 767px) {
   .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
