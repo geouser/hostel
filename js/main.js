@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
     $(window).on('load resize', function(event) {
         event.preventDefault();
-        $('.rooms hr').remove();
+        $('.rooms>hr').remove();
         
         if ($(window).width() < 1916 && $(window).width() > 1496 ) {
             $('<hr>').insertAfter('.room:nth-of-type(3n)');
@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
             $('<hr>').insertAfter('.room:nth-of-type(1n)');
         }
 
-        $('.rooms hr').last().remove();
+        $('.rooms>hr').last().remove();
 
     });
 

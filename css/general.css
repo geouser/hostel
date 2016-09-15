@@ -2635,6 +2635,11 @@ img.mfp-img {
 .button--send:before {
   background-image: url("../images/airplane.png");
 }
+.button--book-now:before {
+  background-image: url("../images/book-now.png");
+  width: 19px;
+  height: 20px;
+}
 
 a.button {
   line-height: 50px;
