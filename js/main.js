@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
                 'opacity': '1',
                 'transition': 'opacity .2s .4s'
             });
-            if ($(window).width() > 600) {
+            if ($(window).width() > 750) {
                 $('.sidebar').css({
                     'animation-name': 'move'
                 });
@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
                 'transition-delay': '.6s',
                 'left': '-200%'
             });
-            if ($(window).width() > 600) {
+            if ($(window).width() > 750) {
                 $('.sidebar').css({
                     'animation-name': 'moveBack'
                 });
