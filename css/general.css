@@ -2687,6 +2687,9 @@ a.button {
   visibility: visible;
   background-size: 100%;
   background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0px 0px 1px 0px #fff;
+  -moz-box-shadow: inset 0px 0px 1px 0px #fff;
+  box-shadow: inset 0px 0px 1px 0px #fff;
 }
 @media (max-width: 767px) {
   .slider .slick-arrow, .room__info__details .roomslider .slick-arrow {
