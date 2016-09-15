@@ -2635,6 +2635,11 @@ img.mfp-img {
 .button--send:before {
   background-image: url("../images/airplane.png");
 }
+.button--book-now:before {
+  background-image: url("../images/book-now.png");
+  width: 19px;
+  height: 20px;
+}
 
 a.button {
   line-height: 50px;
@@ -2682,11 +2687,9 @@ a.button {
   visibility: visible;
   background-size: 100%;
   background-repeat: no-repeat;
-}
-.slider .slick-arrow.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-disabled {
-  -webkit-filter: grayscale(100%) brightness(2);
-  /* Chrome, Safari, Opera */
-  filter: grayscale(100%) brightness(2);
+  -webkit-box-shadow: inset 0px 0px 1px 0px #fff;
+  -moz-box-shadow: inset 0px 0px 1px 0px #fff;
+  box-shadow: inset 0px 0px 1px 0px #fff;
 }
 @media (max-width: 767px) {
   .slider .slick-arrow, .room__info__details .roomslider .slick-arrow {
@@ -2702,7 +2705,10 @@ a.button {
 }
 .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
   left: 80px;
-  background-image: url(../images/arrow-prev.png);
+  background-image: url(../images/arrow-prev.svg);
+}
+.slider .slick-arrow.slick-prev.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-prev.slick-disabled {
+  background-image: url(../images/arrow-prev-disabled.svg);
 }
 @media (max-width: 767px) {
   .slider .slick-arrow.slick-prev, .room__info__details .roomslider .slick-arrow.slick-prev {
@@ -2711,7 +2717,10 @@ a.button {
 }
 .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
   left: 150px;
-  background-image: url(../images/arrow-next.png);
+  background-image: url(../images/arrow-next.svg);
+}
+.slider .slick-arrow.slick-next.slick-disabled, .room__info__details .roomslider .slick-arrow.slick-next.slick-disabled {
+  background-image: url(../images/arrow-next-disabled.svg);
 }
 @media (max-width: 767px) {
   .slider .slick-arrow.slick-next, .room__info__details .roomslider .slick-arrow.slick-next {
@@ -2835,7 +2844,7 @@ a.button {
   position: absolute;
   top: 0;
   left: 60px;
-  z-index: 10;
+  z-index: 20;
 }
 @media (max-width: 767px) {
   .heading--gallery {
